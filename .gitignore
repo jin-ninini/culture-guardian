@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+env/
+
+# Generated data
+data/rag_repository/
+data/rag_repository_backup/
+data/users/
+data/eval/results/
+
+# Model checkpoints and logs
+models/*
+!models/.gitkeep
+*.pt
+*.bin
+*.pkl
+*.pickle
+*.sqlite3
+*.tfevents
+*.ckpt
+
+# Cache
+.cache/
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+
+# Claude Code (harness, skills, working state)
+.claude/
+CLAUDE.md
+PROGRESS.md
+DECISIONS.md

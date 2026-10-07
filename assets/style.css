@@ -1,0 +1,103 @@
+html, body {
+    background: url("/gradio_api/file={SPACE_BG}") center/cover fixed no-repeat !important;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+gradio-app, .gradio-container, #root, .app, .tabs {
+    background: transparent !important;
+}
+
+/* 카드 */
+.cgw-card {
+    background: rgba(10, 12, 25, 0.90);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(148,163,184,0.35);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* 입력창 전체에 동일 스타일 적용 */
+.cgw-card textarea,
+.cgw-card input[type="text"],
+.cgw-card input[type="password"] {
+    background: rgba(2, 6, 23, 0.70) !important;
+    border: 1px solid #7CFF6B !important;   /* 네온 초록 테두리 */
+    border-radius: 10px !important;
+    color: #7CFF6B !important;              /* 입력 글씨 */
+    padding-left: 1rem !important;
+    font-weight: 600;
+}
+
+/* 흰색/회색 박스 제거 (Gradio 기본 block 제거) */
+.form, .container, .block, label, textarea, input {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-width: 0 !important;
+}
+
+/* 라벨 텍스트 */
+label span,
+.svelte-1gfkn6j,
+.svelte-1f354aw {
+    color: #7CFF6B !important;  /* 네온 초록 */
+    font-weight: bold !important;
+}
+
+/* 버튼 */
+button.primary {
+    background: linear-gradient(135deg, #5cf46c, #7CFF6B) !important;
+    color: #020617 !important;
+    font-weight: 700 !important;
+}
+button.secondary {
+    background: rgba(2,6,23,0.9) !important;
+    border: 1px solid rgba(124,255,107,0.7) !important;
+    color: #7CFF6B !important;
+}
+
+/* 채팅 */
+.chat-window {
+    max-height: 450px;
+    overflow-y: auto;
+}
+.chat-row {
+    display:flex; 
+    margin:6px 0;
+}
+.chat-row.user { justify-content:flex-end; }
+.chat-row.bot { justify-content:flex-start; }
+
+.chat-bubble {
+    max-width:70%;
+    padding:10px 14px;
+    border-radius:16px;
+    font-size:0.95rem;
+    white-space:pre-wrap;
+}
+.chat-bubble.user {
+    background:rgba(124,255,107,0.20);
+    border:1px solid rgba(124,255,107,0.7);
+    color:white;
+}
+.chat-bubble.bot {
+    background:rgba(12,18,40,0.92);
+    border:1px solid rgba(124,255,107,0.4);
+    color:white;
+}
+.chat-avatar-img img {
+    width:32px;
+    height:32px;
+    margin-right:8px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.cgw-title h1 {
+    color: #ffffff !important;
+}
+.cgw-title p {
+    color: #7CFF6B !important;
+}

@@ -1,0 +1,20 @@
+base_config: "base.yaml"
+
+model_name: "klue/roberta-large"
+experiment_name: "klue_roberta_experiment"
+model_type: "klue-roberta"
+
+batch_size: 8
+learning_rate: 1.5e-5
+epochs: 5
+dropout: 0.1
+weight_decay: 0.01
+warmup_ratio: 0.06
+
+## 추가한 부분
+
+label_smoothing: 0.05
+rdrop_alpha: 1.0
+use_ema: true
+ema_decay: 0.999
+

@@ -1,0 +1,40 @@
+# ====== 공통 기본 설정 ======
+seed: 42
+max_length: 128
+num_labels: 3
+
+# ====== 라벨 이름 (최종 클래스 기준) ======
+# 0 = 호기심/정보요청
+# 1 = 비하/도발
+# 2 = 편견
+labels:
+  - "호기심/정보요청"
+  - "비하/도발"
+  - "편견"
+
+# ====== RAW 라벨 → FINAL 라벨 매핑 ======
+# CSV에 있는 0~4 숫자를 0~2로 변환하는 규칙
+raw_label_to_final_label:
+  0: 0   # 호기심
+  1: 0   # 정보요청
+  2: 2   # 편견
+  3: 1   # 비하
+  4: 1   # 도발
+
+# ====== Optimizer & Scheduler ======
+optimizer: AdamW
+scheduler: linear
+
+# ====== Metrics ======
+metrics: ["accuracy", "f1", "precision", "recall", "mcc", "purity"]
+
+# ====== 저장 및 로깅 ======
+save_dir: "models/intent_classifier"
+save_best_only: true
+log_interval: 50
+
+# ====== 데이터 경로 ======
+train_path: "data/intent/splits/train_clean.csv"
+valid_path: "data/intent/splits/valid_clean.csv"
+test_path: "data/intent/splits/test_clean.csv"
+
