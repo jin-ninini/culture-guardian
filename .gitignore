@@ -11,11 +11,20 @@ env/
 data/rag_repository/
 data/rag_repository_backup/
 data/users/
-data/eval/results/
 
-# Model checkpoints and logs
+# Model checkpoints and logs (only small result files of each experiment are tracked)
 models/*
 !models/.gitkeep
+!models/intent_classifier/
+models/intent_classifier/*
+!models/intent_classifier/*/
+models/intent_classifier/*/*
+!models/intent_classifier/*/training.log
+!models/intent_classifier/*/valid_metrics.json
+!models/intent_classifier/*/test_metrics.json
+!models/intent_classifier/*/classification_report.txt
+!models/intent_classifier/*/confusion_matrix.png
+!models/intent_classifier/*/misclassified_samples.csv
 *.pt
 *.bin
 *.pkl
